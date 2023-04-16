@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  transition: 1s;
+  font-weight: 400;
+  align-items: center;
+}
+.services{
+	display: flex;
+  flex-wrap: wrap;
+	margin-left: 100px;
+}
+img{
+  width: 27px;
+  opacity: 0.60;
+}
+body {
+  min-height: 100%;
+  color: #fff;
+  background: #111;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  background: whitesmoke;
+  z-index: 9999;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: blueviolet;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: blueviolet;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  z-index: 99999;
+  padding: 20px 0;
+  background-color: #333;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+  z-index: 9999;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: blueviolet;
+  transform: scale(1.1);
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #fff;
+}
+.material-symbols-outlined{
+  color: #fff;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+.landing{
+  background: blueviolet;
+  height: 800px;
+  color: #fff;
+}
+button{
+  width: 20%;
+  height: 30px;
+  border-radius: 10px;
+  background: none;
+  color: white;
+  border: 1px white solid;
+  margin-top: 5px;
+}
+button:hover{
+  transform: scale(1.1);
+  color: blueviolet;
+  background: white;
+}
+.logo-img {
+  opacity: 1;
+  width: 80px;
+  filter: brightness(0) saturate(300%) invert(23%) sepia(98%) saturate(1466%) hue-rotate(270deg) brightness(101%) contrast(100%);
+}
+.img{
+  opacity: 1;
+  width: 400px;
+}
+.h1{
+  color: blueviolet;
+  font-size: 45px;
+}
+h1{
+  margin-top: 30px;
+}
+p{
+  font-size: 30px
+}
+.about{
+  align-items: center;
+  display: flex;
+}
+@media(max-width: 900px){
+  .img{
+    width: 200px;
+  }
+  p{
+    font-size: 17px;
+  }
+  .h1{
+   font-size: 28px;
+  }
+}
+.landing img{
+  width: 35px;
+  opacity: 0.70;
+  transition: 1s;
+  display: flex;
+}
+.landing img:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+html{
+  scroll-behavior: smooth;
+}
+.service{
+  transition: 0.50s;
+	width: 200px;
+	height: 350px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #222;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.service:hover {
+	transform: scale(1.1);
+}
+.service img:hover{
+  opacity: 1;
+}
+.service img {
+	width: 170px;
+	opacity: 0.50;
+	height: 170px;
+	border-radius: 5px;
+}
+.btn:hover{
+  background: blueviolet;
+  color: white;
+}
+.btn{
+  border: 1px blueviolet solid;
+  color: blueviolet;
+}
+input{
+  border: 1px blueviolet solid;
+  width: 215px;
+  height: 30px;
+  margin-top: 5px;
+  background: none;
+}
+::placeholder{
+  color: white;
+}
+textarea{
+  background: none;
+  border: 1px blueviolet solid;
+}
+footer{
+  background: black;
+  height: 200px;
+}
+footer h4{
+  margin-top: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <img src="FB_IMG_1681574037744-removebg-preview.png" class="logo-img">
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">Coder Crafters</span>
+        </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Home</span>
+              </a>
+            </li>
+            <li class="list">
+    <a href="#about" class="nav-link">
+    <i class="material-symbols-outlined">info</i>
+    <span class="link">About</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#services" class="nav-link">
+       <i class="material-symbols-outlined">
+              design_services
+            </i>
+          <span class="link">Services</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-pie-chart-alt-2 icon"></i>
+                <span class="link">Pages</span>
+              </a>
+            </li>
+            <li class="list">
+        <a href="#contact" class="nav-link">
+       <i class="material-symbols-outlined">
+            contact_mail
+          </i>
+         <span class="link">Contact</span>
+             </a>
+            </li>
+          </ul>
+          <div style="border-bottom: 1px white solid; width: 150px"></div>
+          <br>
+          <div class="bottom-cotent">
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-cog icon"></i>
+                <span class="link">Settings</span>
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="overlay"></section>
+    <div class="landing">
+      <center>
+        <br>
+        <br>
+        <br>
+        <br>
+     <div align="right">
+     <img src="360_F_512566069_FHP6Z1TA3mU4miljMwqwywbcdAV1x8gK-removebg-preview.png" alt="icon">
+     <img src="606964_github_4096x4096.png" alt="icon">
+     </div>
+     <br>
+     <br>
+    <h1>You Wish And We Build!!</h1>
+    <p>We Are A Team Developing Websites.</p>
+    <button>Learn More</button>
+      </center>
+    </div>
+    <br>
+    <center>
+      <h1 id="about" class="h1">About us</h1>
+    </center>
+    <div class="about">
+  <div align="left">
+    <p>We Are Team Designe And Develop Websites And We Are From Egypt And We Made Many Projects.Our Team Is Include 4 Members.</p>
+  </div>
+  <div align="right">
+    <img src="whiteboard-animation-and-explainer-video-studio.png" class="img">
+  </div>
+  </div>
+  <br><br>
+  <center id="services">
+    <h1 class="h1">Services</h1>
+    <br>
+  </center>
+  <div class="services">
+    <div class="service">
+     <img src="website-design-3-xxl.png" alt="">
+     <center>
+     <h2>Web Designers</h2>
+     </center>
+    </div>
+  <div class="service">
+    <img src="6fe523255cab538d5b5afaea3b3f695c-removebg-preview.png" alt="">
+    <center>
+    <h2>Web Developers</h2>
+    </center>
+  </div>
+  </div>
+  <br>
+<center class="contact">
+  <h1 class="h1">Contact us</h1>
+   <div class="box">
+  <br>
+  <input type="text" placeholder=" From">
+  <br>
+  <input type="text" placeholder=" To">
+  <br>
+  <br>
+  <textarea name="" id="" cols="30" rows="10" placeholder="  Enter Your Subject"></textarea>
+  <br>
+  <button class="btn">submit</button>
+  </div>
+  </center>
+  <br>
+  <br>
+<footer>
+  <h4>Copyright By Code Crafters Team</h4>
+</footer>
+  <script>
+    const navBar = document.querySelector("nav"),
+      menuBtns = document.querySelectorAll(".menu-icon"),
+      overlay = document.querySelector(".overlay");
+    
+    menuBtns.forEach((menuBtn) => {
+      menuBtn.addEventListener("click", () => {
+        navBar.classList.toggle("open");
+      });
+    });
+    
+    overlay.addEventListener("click", () => {
+      navBar.classList.remove("open");
+    });
+  </script>
+  </body>
+</html>
